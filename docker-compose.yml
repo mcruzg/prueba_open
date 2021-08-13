@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  servidor-firma-incrustada:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    image: servidor-firma-incrustada:v1
+    mem_limit: 512m
+    environment:
+      TZ: "America/Mexico_City"
+    restart: always
+    network_mode: host
+    hostname: localhost    
